@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92C109D4-D7A1-465C-B209-8C7FAA3315C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JX3_AuxiliarySystem</RootNamespace>
+    <AssemblyName>JX3_AuxiliarySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Dll\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet.Framework.Common">
+      <HintPath>.\DotNet.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="MegaApiClient, Version=1.6.3.424, Culture=neutral, PublicKeyToken=0480d311efbeb4e2, processorArchitecture=MSIL">
+      <HintPath>..\packages\MegaApiClient.1.6.3\lib\net46\MegaApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hook\GlobalHook.cs" />
+    <Compile Include="Hook\Keyboard\KeyboardEvent.cs" />
+    <Compile Include="Hook\Keyboard\Manger_KeyboardHook.cs" />
+    <Compile Include="Hook\Mouse\Manger_MouseHook.cs" />
+    <Compile Include="Hook\Mouse\MouseBtnWheel.cs" />
+    <Compile Include="Hook\Public\PublicConstansts.cs" />
+    <Compile Include="Hook\Public\PublicFunction.cs" />
+    <Compile Include="Hook\Public\PublicStruct.cs" />
+    <Compile Include="JX3副本\Test\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\Test\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\戰獸\報九楓.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\戰獸\報九楓.Designer.cs">
+      <DependentUpon>報九楓.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageLearnSystem\DatabaseSystem.cs" />
+    <Compile Include="ImageLearnSystem\ImageProcess.cs" />
+    <Compile Include="ImageLearnSystem\ImageLearnSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageLearnSystem\ImageLearnSystem.Designer.cs">
+      <DependentUpon>ImageLearnSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaptureArea\CaptureArea_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaptureArea\CaptureArea_Form.Designer.cs">
+      <DependentUpon>CaptureArea_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaptureArea\ScreenCapture.cs" />
+    <Compile Include="JX3副本\GlobalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\GlobalForm.Designer.cs">
+      <DependentUpon>GlobalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JX3副本\狼神\史思明.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\狼神\史思明.Designer.cs">
+      <DependentUpon>史思明.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\狼神\烏索.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\狼神\烏索.Designer.cs">
+      <DependentUpon>烏索.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\狼神\勒空明.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\狼神\勒空明.Designer.cs">
+      <DependentUpon>勒空明.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\謝語_25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\謝語_25.Designer.cs">
+      <DependentUpon>謝語_25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\謝語.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\謝語.Designer.cs">
+      <DependentUpon>謝語.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\柳時清.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\柳時清.Designer.cs">
+      <DependentUpon>柳時清.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\史朝英.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\史朝英.Designer.cs">
+      <DependentUpon>史朝英.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\柳哲.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\柳哲.Designer.cs">
+      <DependentUpon>柳哲.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\柳愚.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JX3副本\鍛刀\柳愚.Designer.cs">
+      <DependentUpon>柳愚.cs</DependentUpon>
+    </Compile>
+    <Compile Include="考試\ImperialExamination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="考試\ImperialExamination.Designer.cs">
+      <DependentUpon>ImperialExamination.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="JX3副本\GlobalForm.resx">
+      <DependentUpon>GlobalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\戰獸\報九楓.resx">
+      <DependentUpon>報九楓.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageLearnSystem\ImageLearnSystem.resx">
+      <DependentUpon>ImageLearnSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaptureArea\CaptureArea_Form.resx">
+      <DependentUpon>CaptureArea_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="JX3副本\狼神\史思明.resx">
+      <DependentUpon>史思明.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\狼神\烏索.resx">
+      <DependentUpon>烏索.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\狼神\勒空明.resx">
+      <DependentUpon>勒空明.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\鍛刀\柳哲.resx">
+      <DependentUpon>柳哲.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\鍛刀\柳時清.resx">
+      <DependentUpon>柳時清.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\鍛刀\謝語.resx">
+      <DependentUpon>謝語.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\鍛刀\謝語_25.resx">
+      <DependentUpon>謝語_25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\鍛刀\史朝英.resx">
+      <DependentUpon>史朝英.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JX3副本\鍛刀\柳愚.resx">
+      <DependentUpon>柳愚.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="考試\ImperialExamination.resx">
+      <DependentUpon>ImperialExamination.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JX3副本\輝天\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 與 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

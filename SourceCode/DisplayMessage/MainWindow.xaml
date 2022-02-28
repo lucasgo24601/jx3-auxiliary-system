@@ -1,0 +1,19 @@
+﻿<Window x:Class="DisplayMessage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DisplayMessage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="55.089" Width="132.025">
+	<Grid RenderTransformOrigin="0.5,0.5" Margin="-34,186,573,104">
+		<Grid.RenderTransform>
+			<TransformGroup>
+				<ScaleTransform/>
+				<SkewTransform/>
+				<RotateTransform Angle="143.942"/>
+				<TranslateTransform/>
+			</TransformGroup>
+		</Grid.RenderTransform>
+	</Grid>
+</Window>
